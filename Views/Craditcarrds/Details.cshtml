@@ -1,0 +1,49 @@
+﻿@model Shipping.Models.Craditcarrd
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Mymester.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Craditcarrd</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+         @Html.DisplayNameFor(model => model.C_name)
+        </dt>
+        <dd>
+          @Html.DisplayFor(model => model.C_name)
+        </dd>
+        <dt>
+         @Html.DisplayNameFor(model => model.C_address)
+        </dt>
+        <dd>
+          @Html.DisplayFor(model => model.C_address)
+        </dd>
+        <dt>
+          @Html.DisplayNameFor(model => model.C_Number)
+        </dt>
+        <dd>
+          @Html.DisplayFor(model => model.C_Number)
+        </dd>
+        <dt>
+          @Html.DisplayNameFor(model => model.Vcs)
+        </dt>
+        <dd>
+          @Html.DisplayFor(model => model.Vcs)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Expirydate)
+        </dt>
+        <dd>
+           @Html.DisplayFor(model => model.Expirydate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> 
+    <a asp-action="Index">Back to List</a>
+</div>

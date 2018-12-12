@@ -24,8 +24,8 @@ namespace Shipping.Models
         public DateTime Regist_Date { get; set; }
         [Required]
         [DisplayName("CustomerNumber")]
-        [Column(TypeName = "Decimal(1,2)")]
-        public Decimal CustomerNumber { get; set; }
+        [Column(TypeName = "Decimal(18,2)")]
+        public decimal CustomerNumber { get; set; }
 
         public string Phone { get; set; }
         public string Address { get; set; }

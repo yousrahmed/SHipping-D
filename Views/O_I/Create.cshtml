@@ -1,0 +1,34 @@
+﻿@model Shipping.Models.O_I
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Mymester.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>O_I</h4>
+<hr />
+<div class="Culume">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="O_ID" class="control-label"></label>
+                <select asp-for="O_ID" class ="form-control" asp-items="ViewBag.O_ID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="I_ID" class="control-label"></label>
+                <select asp-for="I_ID" class ="form-control" asp-items="ViewBag.I_ID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

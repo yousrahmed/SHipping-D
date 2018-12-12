@@ -19,12 +19,11 @@ namespace Shipping.Models
         public int C_Number { get; set; }
  [Required(ErrorMessage = "Vcs isRequired")]
         [Display(Name = "Vcs")]
-        [StringLength(3, ErrorMessage = "limited")]
         public int Vcs { get; set; }
         [Required]
         [DisplayName("RegistrationDate")]
         [DataType(DataType.Time)]
-        public String Expirydate { get; set; }
+        public DateTime Expirydate { get; set; }
         public List<Customer> CustomersLIST { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using Shipping.Data;
 namespace Shipping.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20181209190906_initialcreate")]
+    [Migration("20181212130146_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,11 +34,9 @@ namespace Shipping.Migrations
                     b.Property<string>("C_name")
                         .HasMaxLength(14);
 
-                    b.Property<string>("Expirydate")
-                        .IsRequired();
+                    b.Property<DateTime>("Expirydate");
 
-                    b.Property<int>("Vcs")
-                        .HasMaxLength(3);
+                    b.Property<int>("Vcs");
 
                     b.HasKey("ID");
 
@@ -58,7 +56,7 @@ namespace Shipping.Migrations
                     b.Property<int?>("CreditcardID");
 
                     b.Property<decimal>("CustomerNumber")
-                        .HasColumnType("Decimal(1,2)");
+                        .HasColumnType("Decimal(18,2)");
 
                     b.Property<string>("E_Mail");
 

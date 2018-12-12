@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20181209190906_initialcreate.cs" />
+    <Compile Remove="Migrations\20181209190906_initialcreate.Designer.cs" />
+    <Compile Remove="Migrations\20181212125042_initial.cs" />
+    <Compile Remove="Migrations\20181212125042_initial.Designer.cs" />
+    <Compile Remove="Migrations\20181212125345_initial.cs" />
+    <Compile Remove="Migrations\20181212125345_initial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />

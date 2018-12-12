@@ -17,8 +17,8 @@ namespace Shipping.Migrations
                     C_name = table.Column<string>(maxLength: 14, nullable: true),
                     C_address = table.Column<string>(nullable: true),
                     C_Number = table.Column<int>(nullable: false),
-                    Vcs = table.Column<int>(maxLength: 3, nullable: false),
-                    Expirydate = table.Column<string>(nullable: false)
+                    Vcs = table.Column<int>(nullable: false),
+                    Expirydate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,7 +48,7 @@ namespace Shipping.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
                     Regist_Date = table.Column<DateTime>(nullable: false),
-                    CustomerNumber = table.Column<decimal>(type: "Decimal(1,2)", nullable: false),
+                    CustomerNumber = table.Column<decimal>(type: "Decimal(18,2)", nullable: false),
                     Phone = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     E_Mail = table.Column<string>(nullable: true),
